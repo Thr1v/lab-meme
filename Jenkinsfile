@@ -15,7 +15,7 @@ pipeline{
     stages{
         stage("Make a dir"){
             //catchError(buildrResult: "UNSTABLE", stageResult: "UNSTABLE")
-            options{timeout(time: 1, units: "Minutes")}
+            options{timeout(time: 1, units: "MINUTES")}
             steps{
                 //script{"1""2"} // better way at handling blocks of steps if things get too long or complicated. Has to be sh or bash script.                
                 sh "mkdir ~/jenkins || true" // pipe pipe because if it can't mkdir it likely already exists so the error is also true. Don't always use this concept.
