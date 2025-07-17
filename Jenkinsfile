@@ -11,7 +11,6 @@ pipeline{
         timeout(time: 10, unit: "Minutes")
         retry(5) //stage
     */
-    }
     // tools{}
     stages{
         stage("Make a dir"){
