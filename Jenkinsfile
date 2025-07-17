@@ -24,6 +24,12 @@ pipeline{
                 //sh "touch file.txt" // won't write into the folder above, individual shells.
 
             }
+            }
+        
+        stage("add a file"){
+            steps{
+                sh "touch ~/jenkins/file.txt"
+            }
             post{
                 success {echo "successfully ran stages!"}
                 failure {echo "we failed..."}
@@ -33,15 +39,7 @@ pipeline{
                 clean up actions
                 printing file systems
                 */
-            }
+                }    
         }
-        stage("add a file"){
-            steps{
-                sh "touch ~/jenkins/file.txt"
-            }    
-        }
-
     }
-
-
 }
