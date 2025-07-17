@@ -21,10 +21,8 @@ pipeline{
                 sh "mkdir ~/jenkins || true" // pipe pipe because if it can't mkdir it likely already exists so the error is also true. Don't always use this concept.
                 //sh "cd ~/jenkins"
                 //sh "touch file.txt" // won't write into the folder above, individual shells.
-
+                }
             }
-            }
-        
         stage("add a file"){
             steps{
                 sh "touch ~/jenkins/file.txt"
